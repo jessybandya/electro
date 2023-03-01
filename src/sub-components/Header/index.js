@@ -40,7 +40,6 @@ import Slide from '@mui/material/Slide';
 import GooglePlacesAutocomplete, { geocodeByAddress, getLatLng, geocodeByLatLng } from 'react-google-places-autocomplete';
 import Typewriter from 'typewriter-effect';
 import HeaderCategories from '../MenuCategory/Header';
-import Logo from "../../assets/logo.png"
 import { toast } from 'react-toastify';
 import AddLocationAltIcon from '@mui/icons-material/AddLocationAlt';
 
@@ -189,7 +188,7 @@ console.log("Address: ", latitude)
     // <input type="text" value={message} onChange={(event) => dispatch(updateMessage(event.target.value))}/>
 
   // set Google Maps Geocoding API for purposes of quota management. Its optional but recommended.
-Geocode.setApiKey('AIzaSyCAawMnC6vfUa40ZNFsLN-ov7Pa4DjcUrM');
+Geocode.setApiKey('');
 
 // set response language. Defaults to english.
 Geocode.setLanguage("en");
@@ -296,7 +295,7 @@ Geocode.fromLatLng(lat, lng).then(
             {!address ?(
                 <GooglePlacesAutocomplete
                 style={{width:'100%'}}
-   apiKey={'AIzaSyCAawMnC6vfUa40ZNFsLN-ov7Pa4DjcUrM'}
+   apiKey={''}
    selectProps={{
    placeholder: `Nairobi, Kenya`,
    name:"address",
@@ -308,7 +307,7 @@ Geocode.fromLatLng(lat, lng).then(
             ):(
               <GooglePlacesAutocomplete
               style={{width:'100%'}}
- apiKey={'AIzaSyCAawMnC6vfUa40ZNFsLN-ov7Pa4DjcUrM'}
+ apiKey={''}
  selectProps={{
  placeholder: `${address}`,
  name:"address",
@@ -327,7 +326,7 @@ Geocode.fromLatLng(lat, lng).then(
                 <div style={{width:'80%',borderRadius:5}}>
                 <GooglePlacesAutocomplete
                 style={{width:'100%'}}
-   apiKey={'AIzaSyCAawMnC6vfUa40ZNFsLN-ov7Pa4DjcUrM'}
+   apiKey={''}
    selectProps={{
    placeholder: `${address}`,
    name:"address",
@@ -350,7 +349,7 @@ Geocode.fromLatLng(lat, lng).then(
                   <div style={{width:'80%',borderRadius:5}}>
                 <GooglePlacesAutocomplete
                 style={{width:'100%'}}
-   apiKey={'AIzaSyCAawMnC6vfUa40ZNFsLN-ov7Pa4DjcUrM'}
+   apiKey={''}
    selectProps={{
    placeholder: `Nairobi, Kenya`,
    name:"address",

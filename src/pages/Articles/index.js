@@ -63,7 +63,7 @@ function Articles() {
     <Divider sx={{ height: 28, m: 0.5 }} orientation="vertical" />
     {auth?.currentUser?.uid &&(
       <IconButton color="primary" sx={{ p: '10px' }} aria-label="directions">
-      <DriveFolderUploadIcon onClick={() => setModalShow(true)} style={{color:'#e74c3c'}}/>
+      <DriveFolderUploadIcon onClick={() => setModalShow(true)} style={{color:'#43a047'}}/>
     </IconButton>   
     )}   
   </Paper>  

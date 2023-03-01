@@ -27,15 +27,8 @@ import { useSelector, useDispatch } from 'react-redux'
 import { useSoftUIController, setMiniSidenav, setOpenConfigurator } from "./context";
 
 // Images
-import brand from "./assets/images/logo-ct.png";
-import { auth } from "./firebase";
 import SignUp from "./layouts/authentication/sign-up";
 import Admin from "./pages/Admin";
-import Articles from "./pages/Articles";
-import Article from "./pages/Article";
-import Profile from "./pages/Profile";
-import Album from "./pages/Gallery/Album";
-import Event from './pages/Events/Event'
 import Menus from "./pages/Menu";
 import Addimages from "./pages/Admin/Articles/Addelec/Addimages";
 import Checkout from "./sub-components/Checkout";
@@ -149,13 +142,9 @@ export default function App() {
           <Route path="*" element={<Navigate to="/home" />} />
           <Route exact path="/authentication/sign-up" element={<SignUp />} />
           <Route exact path="/admin" element={<Admin />} />
-          <Route exact path="/article/:bool/:articleID/:ownerID" element={<Article />} />
-          <Route exact path="/profile/:bool/:ownerID" element={<Profile />} />
-          <Route exact path="/album/:albumId/:uid" element={<Album />} />
-          <Route exact path="/event/:bool/:id" element={<Event />} />
           <Route exact path="/shopping" element={<Menus />} />
           <Route exact path="/add-images/:bool/:id" element={<Addimages />} />  
-          <Route exact path="/check-out" element={<Checkout />} />        
+          <Route exact path="/check-out" element={<Checkout />} />  
         
         </Routes>
         </>
@@ -180,10 +169,6 @@ export default function App() {
           <Route path="*" element={<Navigate to="/home" />} />
           <Route exact path="/authentication/sign-up" element={<SignUp />} />
           <Route exact path="/admin" element={<Admin />} />
-          <Route exact path="/profile/:bool/:ownerID" element={<Profile />} />
-          <Route exact path="/article/:bool/:articleID/:ownerID" element={<Article />} />
-          <Route exact path="/album/:albumId/:uid" element={<Album />} />
-          <Route exact path="/event/:bool/:id" element={<Event />} />
           <Route exact path="/shopping" element={<Menus />} />
           <Route exact path="/add-images/:bool/:id" element={<Addimages />} />   
           <Route exact path="/check-out" element={<Checkout />} />        
